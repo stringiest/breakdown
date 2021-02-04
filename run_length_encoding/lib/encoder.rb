@@ -26,4 +26,16 @@ class Encoder
     def is_all_first_letter?(string)
         is_all_this_letter?(string, get_first_letter(string))
     end
+
+    def get_length_of_first_run(string)
+        first_run = []
+        string_to_list(string).each { |letter| 
+            if letter == get_first_letter(string)
+                first_run << letter 
+            else
+                break
+            end
+        }
+        first_run.length
+    end
 end
