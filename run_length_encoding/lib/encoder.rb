@@ -15,11 +15,15 @@ class Encoder
         string.split("")
     end
 
-    def is_all_as?(string)
-        if string == "a" * get_length(string).to_i
+    def is_all_as?(string, letter = "a")
+        if string == letter * get_length(string).to_i
             true
         else
             false
         end
+    end
+
+    def is_all_this_letter?(string, letter)
+        is_all_as?(string, letter)
     end
 end
