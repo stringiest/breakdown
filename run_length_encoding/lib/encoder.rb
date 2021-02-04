@@ -14,4 +14,12 @@ class Encoder
     def string_to_list(string)
         string.split("")
     end
+
+    def is_all_as?(string)
+        if string == "a" * get_length(string).to_i
+            true
+        else
+            false
+        end
+    end
 end
