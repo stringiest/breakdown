@@ -10,4 +10,8 @@ class Encoder
     def get_first_letter_and_length(string)
          get_first_letter(string) + get_length(string).to_s
     end
+
+    def string_to_list(string)
+        string.split("")
+    end
 end
