@@ -16,7 +16,7 @@ class Encoder
     end
 
     def is_all_as?(string, letter = "a")
-        string == letter * get_length(string).to_i ? true : false
+        string == letter * get_length(string).to_i
     end
 
     def is_all_this_letter?(string, letter)
