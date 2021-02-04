@@ -26,4 +26,8 @@ class Encoder
     def is_all_this_letter?(string, letter)
         is_all_as?(string, letter)
     end
+
+    def is_all_first_letter?(string)
+        is_all_this_letter?(string, get_first_letter(string))
+    end
 end
