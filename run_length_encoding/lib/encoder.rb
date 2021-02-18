@@ -97,4 +97,10 @@ class Encoder
             get_first_letter_and_length(str)
         end 
     end
+
+    def get_first_letter_and_length_of_runs_with_special(string)
+        get_first_letter_and_length_of_runs(string).map! do |str|
+            str[-1] == "1" ? str.chop : str
+        end
+    end
 end
