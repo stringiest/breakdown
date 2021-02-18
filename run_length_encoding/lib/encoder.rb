@@ -103,4 +103,8 @@ class Encoder
             str[-1] == "1" ? str.chop : str
         end
     end
+
+    def encode(string)
+        get_first_letter_and_length_of_runs_with_special(string).join
+    end
 end
