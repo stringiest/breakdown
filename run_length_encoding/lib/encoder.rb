@@ -47,15 +47,7 @@ class Encoder
     end
 
     def get_length_of_first_run(string)
-        first_run = []
-        string_to_list(string).each { |letter| 
-            if letter == get_first_letter(string)
-                first_run << letter 
-            else
-                break
-            end
-        }
-        first_run.length
+        get_first_run(string).length
         # alternatively:
         # letters = string_to_list(string)
         # count = 0
