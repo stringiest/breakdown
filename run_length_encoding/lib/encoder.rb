@@ -91,4 +91,10 @@ class Encoder
             get_length(str)
         end
     end
+
+    def get_first_letter_and_length_of_runs(string)
+        get_all_runs(string).map! do |str|
+            get_first_letter_and_length(str)
+        end 
+    end
 end
