@@ -72,4 +72,8 @@ class Encoder
         }
         first_run.join
     end
+
+    def get_after_first_run(string)
+        string.delete_prefix(get_first_run(string))
+    end
 end
