@@ -13,14 +13,33 @@ class Encoder
 
     def string_to_list(string)
         string.split("")
+        # alternative option is string.chars
     end
 
     def is_all_as?(string, letter = "a")
         string == letter * get_length(string).to_i
+        # alternatively, string_to_list(string).uniq == ["a"]
+        # or iterating over a list:
+        # letters = string_to_list(string)
+        # letters.each do |letter|
+        # if letter != "a"
+        # return false
+        # end
+        # end
+        # return true
     end
 
-    def is_all_this_letter?(string, letter)
+    def is_all_this_letter?(string, letter) # pass in my_letter here rather than letter
         is_all_as?(string, letter)
+        # or:
+        # letters = string_to_list(string)
+        # letters.each do |letter|
+        # if letter != my_letter
+        # return false
+        # end
+        # end
+        # return true 
+        # then can refactor previous method to use this one
     end
 
     def is_all_first_letter?(string)
@@ -37,5 +56,16 @@ class Encoder
             end
         }
         first_run.length
+        # alternatively:
+        # letters = string_to_list(string)
+        # count = 0
+        # letters.each do |letter|
+        # if letter != get_first_letter(string)
+        # return count
+        # end
+        # count += 1
+        # end
+        # return count
+        # end
     end
 end
