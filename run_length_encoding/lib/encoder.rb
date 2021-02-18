@@ -62,7 +62,7 @@ class Encoder
     end
 
     def get_first_run(string)
-        first_run = []
+        first_run = ""
         string_to_list(string).each { |letter| 
             if letter == get_first_letter(string)
                 first_run << letter 
@@ -70,7 +70,7 @@ class Encoder
                 break
             end
         }
-        first_run.join
+        first_run
     end
 
     def get_after_first_run(string)
